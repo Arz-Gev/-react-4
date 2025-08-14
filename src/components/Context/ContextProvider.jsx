@@ -10,7 +10,6 @@ export default function Context({ children }) {
     return {
       logged: !!data,
       userData: parsedData,
-      storageKey: "userData",
     };
   });
 

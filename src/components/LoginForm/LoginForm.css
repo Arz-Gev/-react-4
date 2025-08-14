@@ -1,6 +1,64 @@
 .form {
-  width: 10rem;
-  height: 10rem;
+  display: flex;
+  flex-direction: column;
   background-color: white;
   margin: 0 auto;
+  padding: 3.5rem 2rem;
+  width: min(28rem, 90%);
+  gap: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 2px 4px 13px rgba(0, 0, 0, 0.137);
+}
+
+.input-label {
+  width: 100%;
+}
+
+.input-field {
+  width: 100%;
+  background-color: transparent;
+  height: 2.75rem;
+  border: solid 1px rgba(0, 0, 0, 0.24);
+  border-radius: 0.5rem;
+  padding: 0 0.75rem;
+  color: black;
+}
+
+.input-field:focus {
+  outline: none;
+  border-width: 2px;
+}
+
+.span {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.form-icon {
+  flex: 0 0 auto;
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5rem;
+}
+
+.submit-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    rgb(30, 191, 255) 30%,
+    rgb(17, 99, 250) 100%
+  );
+  height: 2.75rem;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0 0.75rem;
+  color: white;
+  cursor: pointer;
 }

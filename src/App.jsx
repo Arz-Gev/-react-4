@@ -8,8 +8,10 @@ function App() {
   return (
     <Context>
       <Header />
-      <Welcome />
-      <LoginForm />
+      <div className="main">
+        <Welcome />
+        <LoginForm />
+      </div>
     </Context>
   );
 }

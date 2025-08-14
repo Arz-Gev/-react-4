@@ -15,12 +15,12 @@ export default function Welcome() {
     <div className="welcome-container">
       {sharedData.logged ? (
         <>
-          <h2>Welcome Back, {sharedData.userData.name}</h2>
+          <h1>Welcome Back, {sharedData.userData.name}</h1>
           <p>Today is Thursday, {" " + date}</p>
         </>
       ) : (
         <>
-          <h2>Welcome Back</h2>
+          <h1>Welcome Back</h1>
           <p>Sign in to access your personal dashboard</p>
         </>
       )}

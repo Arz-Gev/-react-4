@@ -24,14 +24,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(48, 142, 250);
+  background: linear-gradient(
+    90deg,
+    rgb(30, 191, 255) 30%,
+    rgb(17, 99, 250) 100%
+  );
   width: 2rem;
   height: 2rem;
   border-radius: 0.5rem;
 }
 
-/*please don't judge for this*/
-.✨ {
+.sparcle-icon {
   color: white;
   width: 1rem;
 }
@@ -41,6 +44,10 @@
   background-color: white;
   border-radius: 0.5rem;
   color: black;
-  border: solid black 1px;
+  border: solid rgba(0, 0, 0, 0.26) 2px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
 }

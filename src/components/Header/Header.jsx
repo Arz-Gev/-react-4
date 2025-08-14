@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Sparkles } from "lucide-react";
 import { globalContext } from "../Context/ContextProvider";
+import { LogOut } from "lucide-react";
 import "./Header.css";
 
 export default function Header() {
@@ -10,7 +11,7 @@ export default function Header() {
       <header className="header">
         <div className="left">
           <div className="icon">
-            <Sparkles className="✨" /> {/*please don't judge for this*/}
+            <Sparkles className="sparcle-icon" />{" "}
           </div>
           <h2>Personal Dashboard</h2>
         </div>
@@ -22,6 +23,7 @@ export default function Header() {
               className="logout-btn"
               onClick={deleteUserData}
             >
+              <LogOut className="form-icon" />
               Logout
             </button>
           </div>
