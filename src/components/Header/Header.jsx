@@ -13,7 +13,7 @@ export default function Header() {
         <div className="icon"></div>
         <h2>Personal Dashboard</h2>
       </div>
-      {data.userData && <div className="right"></div>}
+      {data.logged && <div className="right">please log in</div>}
     </header>
   );
 }
