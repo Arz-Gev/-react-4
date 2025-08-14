@@ -10,7 +10,7 @@ export default function Context({ children }) {
     storageKey: "userData",
   });
 
-  setUserData({ user: "gev", email: "email@email.com" });
+  setUserData({ name: "gev", email: "email@email.com" });
   // deleteUserData();
   console.log(sharedData.logged);
 
