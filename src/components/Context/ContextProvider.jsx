@@ -13,18 +13,12 @@ export default function Context({ children }) {
     };
   });
 
-  // setUserData({ name: "gev", email: "email@email.com" });
-
-  // deleteUserData();
-
-  console.log(sharedData.logged);
-
   function deleteUserData() {
     setSharedData((prev) => ({ ...prev, userData: null, logged: false }));
     localStorage.removeItem("userData");
   }
 
-  function setUserData(data = { name: "gev", email: "email@email.com" }) {
+  function setUserData(data) {
     setSharedData((prev) => ({ ...prev, userData: data, logged: true }));
     localStorage.setItem("userData", JSON.stringify(data));
   }

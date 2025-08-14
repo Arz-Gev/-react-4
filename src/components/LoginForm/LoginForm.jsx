@@ -1,13 +1,34 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { globalContext } from "../Context/ContextProvider";
 import "./LoginForm.css";
-import { Mail, User, ArrowRight } from "lucide-react";
+import { Mail, User, ArrowRight, FolderMinus } from "lucide-react";
 
 export default function LoginForm() {
   const { sharedData, setUserData } = useContext(globalContext);
 
+  const [formData, setFormData] = useState({
+    name: undefined,
+    email: undefined,
+  });
+
+  const [disabled, setDisabled] = useState(true);
+
+  function handleChange(e) {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  }
+
+  useEffect(() => {
+    formData.name !== undefined && formData.email !== undefined
+      ? setDisabled(false)
+      : setDisabled(true);
+  }, [formData]);
+
   function handleSubmit(e) {
     e.preventDefault();
+    setUserData(formData);
   }
 
   return !sharedData.logged ? (
@@ -20,9 +41,10 @@ export default function LoginForm() {
         <input
           className="input-field"
           type="text"
-          name="userName"
+          name="name"
           id="userName"
           placeholder="Enter your username"
+          onChange={handleChange}
         />
       </label>
       <label className="input-label" htmlFor="userEmail">
@@ -33,12 +55,13 @@ export default function LoginForm() {
         <input
           className="input-field"
           type="email"
-          name="userEmail"
+          name="email"
           id="userEmail"
           placeholder="Enter your email"
+          onChange={handleChange}
         />
       </label>
-      <button type="submit" className="submit-button">
+      <button type="submit" className="submit-button" disabled={disabled}>
         Sign In
         <ArrowRight className="form-icon" />
       </button>
