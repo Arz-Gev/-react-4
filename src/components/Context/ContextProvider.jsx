@@ -1,26 +1,32 @@
-import { EditImageResponse } from "@google/genai";
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 export const globalContext = createContext();
 
 export default function Context({ children }) {
-  const [sharedData, setSharedData] = useState({
-    logged: localStorage.getItem("userData"),
-    userData: JSON.parse(localStorage.getItem("userData")),
-    storageKey: "userData",
+  const [sharedData, setSharedData] = useState(() => {
+    const data = localStorage.getItem("userData");
+    const parsedData = data ? JSON.parse(data) : null;
+
+    return {
+      logged: !!data,
+      userData: parsedData,
+      storageKey: "userData",
+    };
   });
 
-  setUserData({ name: "gev", email: "email@email.com" });
+  // setUserData({ name: "gev", email: "email@email.com" });
+
   // deleteUserData();
+
   console.log(sharedData.logged);
 
   function deleteUserData() {
-    // setSharedData((prev) => ({ ...prev, userData: null }));
+    setSharedData((prev) => ({ ...prev, userData: null, logged: false }));
     localStorage.removeItem("userData");
   }
 
-  function setUserData(data) {
-    // setSharedData((prev) => ({ ...prev, userData: data }));
+  function setUserData(data = { name: "gev", email: "email@email.com" }) {
+    setSharedData((prev) => ({ ...prev, userData: data, logged: true }));
     localStorage.setItem("userData", JSON.stringify(data));
   }
 

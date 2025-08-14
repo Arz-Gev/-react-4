@@ -1,9 +1,14 @@
+.wraper {
+  max-width: 1152px;
+  margin: 0 auto;
+  background-color: white;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background-color: white;
 }
 
 .left,
@@ -28,5 +33,3 @@
   border: solid black 1px;
   cursor: pointer;
 }
-
-/* max-width: 1152px; */
