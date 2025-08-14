@@ -11,14 +11,14 @@ export default function LoginForm() {
     email: undefined,
   });
 
-  const [disabled, setDisabled] = useState(true);
-
   function handleChange(e) {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     });
   }
+
+  const [disabled, setDisabled] = useState(true);
 
   useEffect(() => {
     formData.name !== undefined && formData.email !== undefined
@@ -29,6 +29,7 @@ export default function LoginForm() {
   function handleSubmit(e) {
     e.preventDefault();
     setUserData(formData);
+    setDisabled(true);
   }
 
   return !sharedData.logged ? (

@@ -1,0 +1,21 @@
+.dashBoard-contaier {
+  width: min(1152px, 90%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1rem;
+  margin: 0 auto;
+  gap: 2rem;
+  background-color: red;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.card {
+  background-color: blue;
+}
