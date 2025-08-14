@@ -1,5 +1,8 @@
 .welcome-container {
+  display: flex;
+  flex-direction: column;
   max-width: 1152px;
-  margin: 3rem auto 3rem auto;
-  background-color: white;
+  margin: 3rem auto 2rem auto;
+  gap: 1rem;
+  padding: 0 0 1rem 0;
 }

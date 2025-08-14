@@ -1,14 +1,16 @@
 .wraper {
-  max-width: 1152px;
   margin: 0 auto;
   background-color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.199);
 }
 
 .header {
+  max-width: 1152px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
+  margin: 0 auto;
 }
 
 .left,
@@ -19,10 +21,19 @@
 }
 
 .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: rgb(48, 142, 250);
   width: 2rem;
   height: 2rem;
   border-radius: 0.5rem;
+}
+
+/*please don't judge for this*/
+.✨ {
+  color: white;
+  width: 1rem;
 }
 
 .logout-btn {
