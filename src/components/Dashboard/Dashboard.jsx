@@ -65,11 +65,15 @@ export default function Dashboard() {
         ))}
       </div>
       <div className="acitvity-container">
-        <div className="top">
+        <div className="acitvity-top">
           <span className="activity-icon">
             <Activity />
           </span>
+          <h3>Recent Activity</h3>
         </div>
+        <p className="description">Your recent dashboard activities</p>
+        <div className="status-log"></div>
+        <div className="status-log"></div>
       </div>
     </div>
   );

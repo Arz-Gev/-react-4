@@ -26,6 +26,7 @@
 .acitvity-container {
   display: flex;
   flex-direction: column;
+  align-items: start;
   width: 100%;
   background-color: white;
   height: 20.375rem;
@@ -34,8 +35,12 @@
   border-radius: 0.75rem;
 }
 
-.top {
+.acitvity-top {
   display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .activity-icon {
@@ -47,4 +52,16 @@
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 0.7rem;
+}
+
+.description {
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.705);
+  margin-bottom: auto;
+}
+
+.status-log {
+  width: 100%;
+  height: 2rem;
+  background-color: blue;
 }
