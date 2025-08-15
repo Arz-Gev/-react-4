@@ -16,67 +16,6 @@
   justify-content: center;
 }
 
-.card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-color: white;
-  border-radius: 0.75rem;
-  height: 11.25rem;
-  padding: 1.5rem 1.5rem;
-  box-shadow: 2px 4px 13px rgba(0, 0, 0, 0.137);
-  overflow: hidden;
-}
-
-.top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.bottom {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-}
-
-.title {
-  color: rgba(0, 0, 0, 0.705);
-  font-weight: 500;
-}
-
-.iconBig {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 0.5rem;
-}
-
-.blue {
-  background-color: oklch(54.6% 0.245 262.881);
-}
-
-.orange {
-  background-color: oklch(70.5% 0.213 47.604);
-}
-
-.green {
-  background-color: oklch(72.3% 0.219 149.579);
-}
-
-.name {
-  color: rgba(0, 0, 0, 0.842);
-  font-size: 1.25rem;
-}
-
-.status {
-  display: flex;
-  align-items: center;
-}
-
 .icon-body {
   width: 0.75rem;
   height: 0.75rem;
@@ -84,7 +23,28 @@
   margin-right: 0.25rem;
 }
 
-.status-text {
-  font-size: 0.9rem;
-  color: rgba(0, 0, 0, 0.63);
+.acitvity-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: white;
+  height: 20.375rem;
+  box-shadow: 2px 4px 13px rgba(0, 0, 0, 0.137);
+  padding: 1.5rem 1.5rem;
+  border-radius: 0.75rem;
+}
+
+.top {
+  display: flex;
+}
+
+.activity-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: oklch(65.104% 0.23086 354.374);
+  color: white;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.7rem;
 }

@@ -2,7 +2,15 @@ import React, { useContext } from "react";
 import { globalContext } from "../Context/ContextProvider";
 import DashboardCard from "./DashboardCard";
 import "./Dashboard.css";
-import { CircleCheckBig, Clock, User, Mail, Calendar } from "lucide-react";
+import {
+  CircleCheckBig,
+  Clock,
+  User,
+  Mail,
+  Calendar,
+  Activity,
+  TrendingUp,
+} from "lucide-react";
 
 export default function Dashboard() {
   const { sharedData } = useContext(globalContext);
@@ -56,7 +64,13 @@ export default function Dashboard() {
           />
         ))}
       </div>
-      <div className="acitvity-container"></div>
+      <div className="acitvity-container">
+        <div className="top">
+          <span className="activity-icon">
+            <Activity />
+          </span>
+        </div>
+      </div>
     </div>
   );
 }
