@@ -1,25 +1,25 @@
 .card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   background-color: white;
   border-radius: 0.75rem;
-  height: 11.25rem;
-  padding: 1.5rem 1.5rem;
   box-shadow: 2px 4px 13px rgba(0, 0, 0, 0.137);
+  display: flex;
+  flex-direction: column;
+  height: 11.25rem;
+  justify-content: space-between;
   overflow: hidden;
+  padding: 1.5rem 1.5rem;
 }
 
 .top {
+  align-items: center;
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 .bottom {
+  align-items: start;
   display: flex;
   flex-direction: column;
-  align-items: start;
 }
 
 .title {
@@ -28,18 +28,18 @@
 }
 
 .iconBig {
-  display: flex;
   align-items: center;
-  justify-content: center;
-  color: white;
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 0.5rem;
   background: linear-gradient(
     130deg,
     rgba(255, 255, 255, 0.534),
     rgba(255, 255, 255, 0) 100%
   );
+  border-radius: 0.5rem;
+  color: white;
+  display: flex;
+  height: 2.5rem;
+  justify-content: center;
+  width: 2.5rem;
 }
 
 .blue {
@@ -57,14 +57,15 @@
 .name {
   color: rgba(0, 0, 0, 0.842);
   font-size: 1.25rem;
+  margin-bottom: 0.2rem;
 }
 
 .status {
-  display: flex;
   align-items: center;
+  display: flex;
 }
 
 .status-text {
-  font-size: 0.9rem;
   color: rgba(0, 0, 0, 0.63);
+  font-size: 0.9rem;
 }
