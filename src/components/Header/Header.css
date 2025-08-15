@@ -13,6 +13,10 @@
   margin: 0 auto;
 }
 
+.heading {
+  font-size: clamp(1rem, calc(0.5rem + 1.5vw), 2rem);
+}
+
 .left,
 .right {
   display: flex;
@@ -25,7 +29,7 @@
   justify-content: center;
   align-items: center;
   background: linear-gradient(
-    90deg,
+    130deg,
     rgb(30, 191, 255) 30%,
     rgb(17, 99, 250) 100%
   );
@@ -50,4 +54,21 @@
   align-items: center;
   justify-content: center;
   font-weight: 600;
+}
+
+.menu-icon {
+  display: none;
+}
+
+@media screen and (max-width: 425px) {
+  .heading,
+  .display-none-on-mobile,
+  .sparcle-icon {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+    color: white;
+  }
 }

@@ -1,7 +1,8 @@
 import React, { useContext } from "react";
 import { Sparkles } from "lucide-react";
 import { globalContext } from "../Context/ContextProvider";
-import { LogOut } from "lucide-react";
+import { LogOut, Menu } from "lucide-react";
+
 import "./Header.css";
 
 export default function Header() {
@@ -11,13 +12,17 @@ export default function Header() {
       <header className="header">
         <div className="left">
           <div className="icon">
-            <Sparkles className="sparcle-icon" />{" "}
+            <Sparkles className="sparcle-icon" />
+            <Menu className="menu-icon" />
           </div>
-          <h2>Personal Dashboard</h2>
+          <h2 className="heading">Personal Dashboard</h2>
         </div>
         {sharedData.logged ? (
           <div className="right">
-            Welcome back <h4>{sharedData.userData.name}</h4>
+            <span className="display-none-on-mobile">Welcome back</span>{" "}
+            <h4 className="display-none-on-mobile">
+              {sharedData.userData.name}
+            </h4>
             <button
               type="button"
               className="logout-btn"

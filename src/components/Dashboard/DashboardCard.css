@@ -35,6 +35,11 @@
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 0.5rem;
+  background: linear-gradient(
+    130deg,
+    rgba(255, 255, 255, 0.534),
+    rgba(255, 255, 255, 0) 100%
+  );
 }
 
 .blue {

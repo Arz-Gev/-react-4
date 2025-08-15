@@ -72,8 +72,28 @@ export default function Dashboard() {
           <h3>Recent Activity</h3>
         </div>
         <p className="description">Your recent dashboard activities</p>
-        <div className="status-log"></div>
-        <div className="status-log"></div>
+        <div className="status-log green-log">
+          <span className="point green-point"></span>
+          <div className="log-info">
+            <h5>Successfully logged in</h5>
+            <p className="info-small">
+              <Clock className="icon-body icon-body-black" />
+              Just now
+            </p>
+          </div>
+          <TrendingUp className="log-icon-green" />
+        </div>
+        <div className="status-log blue-log">
+          <span className="point blue-point"></span>
+          <div className="log-info">
+            <h5>Dashboard accessed</h5>
+            <p className="info-small">
+              <Clock className="icon-body icon-body-black" />
+              Just now
+            </p>
+          </div>
+          <Activity className="log-icon-blue" />
+        </div>
       </div>
     </div>
   );

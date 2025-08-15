@@ -6,6 +6,7 @@
   padding: 0 1rem;
   margin: 0 auto;
   gap: 2rem;
+  margin-bottom: 2rem;
 }
 
 .cards-container {
@@ -47,11 +48,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: oklch(65.104% 0.23086 354.374);
   color: white;
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 0.7rem;
+  background: linear-gradient(
+    130deg,
+    rgba(136, 0, 214, 0.534),
+    rgba(196, 0, 130, 0.5) 100%
+  );
+  background-color: oklch(65.104% 0.23086 354.374);
 }
 
 .description {
@@ -61,7 +67,69 @@
 }
 
 .status-log {
+  display: flex;
+  align-items: center;
+  border-radius: 0.75rem;
   width: 100%;
-  height: 2rem;
-  background-color: blue;
+  padding: 1rem;
+}
+
+.green-log {
+  margin-bottom: 1rem;
+  background-color: rgba(0, 255, 0, 0.05);
+  border: solid 1px rgba(0, 255, 0, 0.1);
+}
+
+.blue-log {
+  background-color: rgba(0, 132, 255, 0.05);
+  border: solid 1px rgba(0, 132, 255, 0.1);
+}
+
+.point {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+}
+
+.green-point {
+  background-color: rgba(0, 153, 0, 0.7);
+}
+
+.blue-point {
+  background-color: rgba(26, 103, 155, 0.7);
+}
+
+.log-icon-green {
+  width: 1rem;
+  height: 1rem;
+  color: rgba(0, 153, 0, 0.7);
+  margin-left: auto;
+}
+
+.log-icon-blue {
+  width: 1rem;
+  height: 1rem;
+  color: rgba(26, 103, 155, 0.7);
+  margin-left: auto;
+}
+
+.log-info {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-left: 1rem;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.info-small {
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+}
+
+.icon-body-black {
+  color: rgba(0, 0, 0, 0.7);
 }
