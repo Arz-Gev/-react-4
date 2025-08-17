@@ -20,7 +20,6 @@ export default function Context({ children }) {
   }
 
   function setUserData(data) {
-    // setSharedData((prev) => ({ ...prev, userData: data, logged: true }));
     setSharedData({ ...sharedData, userData: data, logged: true });
     localStorage.setItem("userData", JSON.stringify(data));
   }

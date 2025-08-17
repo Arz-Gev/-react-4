@@ -24,7 +24,7 @@ export default function Article() {
     localStorage.removeItem("article");
   }
 
-  function setArticle() {
+  function saveArticle() {
     localStorage.setItem("article", JSON.stringify(articles));
   }
 
@@ -38,7 +38,7 @@ export default function Article() {
   function handleSubmit(e) {
     e.preventDefault();
     setDisabled(true);
-    setArticle();
+    saveArticle();
   }
 
   return (
@@ -79,7 +79,7 @@ export default function Article() {
             />
             <div className="buttons">
               <button
-                onClick={setArticle}
+                onClick={handleSubmit}
                 type="button"
                 className="base-btn"
                 disabled={disabled}
