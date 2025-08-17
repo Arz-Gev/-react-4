@@ -2,6 +2,7 @@
   background-color: white;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.199);
   margin: 0 auto;
+  width: 100%;
 }
 
 .header {
@@ -14,7 +15,7 @@
 }
 
 .heading {
-  font-size: clamp(1rem, calc(0.5rem + 1.5vw), 2rem);
+  font-size: clamp(1rem, calc(0.5rem + 1.5vw), 1.8rem);
 }
 
 .left,
@@ -46,7 +47,7 @@
 .logout-btn {
   align-items: center;
   background-color: white;
-  border: solid rgba(0, 0, 0, 0.26) 2px;
+  border: solid rgba(0, 0, 0, 0.26) 1px;
   border-radius: 0.5rem;
   color: black;
   cursor: pointer;
@@ -56,11 +57,36 @@
   padding: 0.5rem;
 }
 
+.link-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border: solid rgba(0, 0, 0, 0.26) 1px;
+  border-radius: 0.5rem;
+  color: black;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
 .menu-icon {
   display: none;
 }
 
-@media screen and (max-width: 425px) {
+.logout-icon {
+  flex: 0 0 auto;
+  height: 1rem;
+  margin-right: 0.25rem;
+  width: 1rem;
+}
+
+.link-icon {
+  flex: 0 0 auto;
+  height: 1rem;
+  width: 1rem;
+}
+
+@media screen and (max-width: 768px) {
   .heading,
   .display-none-on-mobile,
   .sparcle-icon {

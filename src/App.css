@@ -5,10 +5,10 @@
 }
 
 #root {
-  height: 100vh;
+  height: 100%;
   margin: 0 auto;
   text-align: center;
-  width: 100vw;
+  width: 100%;
 }
 
 .main {

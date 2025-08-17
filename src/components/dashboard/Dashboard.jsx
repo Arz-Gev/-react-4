@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { globalContext } from "../Context/ContextProvider";
+import { globalContext } from "../../Context/ContextProvider";
 import DashboardCard from "./DashboardCard";
 import "./Dashboard.css";
 import {
@@ -15,9 +15,7 @@ import {
 export default function Dashboard() {
   const { sharedData } = useContext(globalContext);
 
-  if (!sharedData.logged) {
-    return <></>;
-  }
+  if (!sharedData.logged) return <></>;
 
   const cards = [
     {
