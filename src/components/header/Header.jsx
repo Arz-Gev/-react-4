@@ -1,11 +1,13 @@
 import React, { useContext } from "react";
 import { Sparkles } from "lucide-react";
-import { globalContext } from "../Context/ContextProvider";
+import { globalContext } from "../../Context/ContextProvider";
 import { LogOut, Menu } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 import "./Header.css";
 
 export default function Header() {
+  const navigate = useNavigate();
   const { sharedData, deleteUserData } = useContext(globalContext);
   return (
     <div className="wraper">
@@ -26,7 +28,10 @@ export default function Header() {
             <button
               type="button"
               className="logout-btn"
-              onClick={deleteUserData}
+              onClick={() => {
+                navigate("/");
+                deleteUserData();
+              }}
             >
               <LogOut className="form-icon" />
               Logout

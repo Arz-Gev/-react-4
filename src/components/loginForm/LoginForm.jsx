@@ -1,10 +1,12 @@
 import React, { useContext, useState, useEffect } from "react";
-import { globalContext } from "../Context/ContextProvider";
+import { useNavigate } from "react-router-dom";
+import { globalContext } from "../../Context/ContextProvider";
+import { Mail, User, ArrowRight, FolderMinus, Sandwich } from "lucide-react";
 import "./LoginForm.css";
-import { Mail, User, ArrowRight, FolderMinus } from "lucide-react";
 
 export default function LoginForm() {
   const { sharedData, setUserData } = useContext(globalContext);
+  const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
     name: undefined,
@@ -28,11 +30,15 @@ export default function LoginForm() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    setUserData(formData);
     setDisabled(true);
+    setUserData(formData);
   }
 
-  return !sharedData.logged ? (
+  useEffect(() => {
+    sharedData.logged && navigate("/dashboard");
+  }, [sharedData.logged]);
+
+  return (
     <form onSubmit={handleSubmit} className="form">
       <label className="input-label" htmlFor="userName">
         <span className="span">
@@ -67,5 +73,5 @@ export default function LoginForm() {
         <ArrowRight className="form-icon" />
       </button>
     </form>
-  ) : null;
+  );
 }

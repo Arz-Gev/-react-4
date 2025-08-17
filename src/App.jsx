@@ -1,19 +1,12 @@
-import Context from "./components/Context/ContextProvider";
-import Header from "./components/Header/Header";
-import Welcome from "./components/Welcome/Welcome";
-import LoginForm from "./components/LoginForm/LoginForm";
-import Dashboard from "./components/Dashboard/Dashboard";
+import { Outlet, Link } from "react-router-dom";
 import "./App.css";
+import Context from "./Context/ContextProvider";
+import Router from "./router/router";
 
 function App() {
   return (
     <Context>
-      <Header />
-      <main className="main">
-        <Welcome />
-        <LoginForm />
-        <Dashboard />
-      </main>
+      <Router />
     </Context>
   );
 }
