@@ -1,0 +1,40 @@
+.not-found-container {
+  width: min(20rem, 100%);
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 1rem;
+  background-color: white;
+  padding: 1.5rem 0.5rem;
+  margin: auto;
+  margin-top: 14%;
+}
+
+.error-id {
+  font-size: 9rem;
+  flex: 0 0 auto;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  line-height: normal;
+}
+
+.error-message {
+  font-weight: 700;
+}
+
+.link {
+  margin-top: 1rem;
+  text-decoration: none;
+  font-weight: 600;
+  color: white;
+  font-size: 1.5rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  background-color: rgb(17, 115, 228);
+}
+
+.link:hover {
+  filter: brightness(1.2);
+}

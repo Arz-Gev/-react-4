@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
+import { React, useContext, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { globalContext } from "../../Context/ContextProvider";
 import { Mail, User, ArrowRight, FolderMinus, Sandwich } from "lucide-react";
@@ -11,7 +11,10 @@ export default function LoginForm() {
   const [formData, setFormData] = useState({
     name: undefined,
     email: undefined,
+    id: undefined,
   });
+
+  const [disabled, setDisabled] = useState(true);
 
   function handleChange(e) {
     setFormData({
@@ -20,13 +23,18 @@ export default function LoginForm() {
     });
   }
 
-  const [disabled, setDisabled] = useState(true);
-
   useEffect(() => {
     formData.name !== undefined && formData.email !== undefined
       ? setDisabled(false)
       : setDisabled(true);
   }, [formData]);
+
+  useEffect(() => {
+    setFormData({
+      ...formData,
+      id: Date.now(),
+    });
+  }, [disabled]);
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -35,7 +43,7 @@ export default function LoginForm() {
   }
 
   useEffect(() => {
-    sharedData.logged && navigate("/dashboard");
+    sharedData.logged && navigate(`/dashboard/user/${sharedData.userData.id}`);
   }, [sharedData.logged]);
 
   return (

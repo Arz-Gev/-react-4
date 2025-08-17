@@ -11,7 +11,7 @@ const router = createBrowserRouter([
     element: <LoginPage />,
   },
   {
-    path: "/dashboard",
+    path: "/dashboard/user/:id",
     element: <DashBoardPage />,
   },
   {
