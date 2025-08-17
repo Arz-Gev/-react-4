@@ -1,7 +1,7 @@
 import { React, useContext, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { globalContext } from "../../Context/ContextProvider";
-import { Mail, User, ArrowRight, FolderMinus, Sandwich } from "lucide-react";
+import { Mail, User, ArrowRight } from "lucide-react";
 import "./LoginForm.css";
 
 export default function LoginForm() {

@@ -1,0 +1,167 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --main-blue: 37, 132, 255;
+  --black: 0, 0, 0;
+}
+
+.article-container {
+  display: flex;
+  margin: 2rem auto;
+  width: min(70rem, 90%);
+  height: 50rem;
+  background-color: white;
+  border-radius: 1rem;
+  position: relative;
+}
+
+.sider {
+  position: absolute;
+  width: min(17rem, 89%);
+  height: 100%;
+  background-color: rgb(197, 212, 255);
+  z-index: 2;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.sider-switcher {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(0, 0, 0, 0.858);
+  background-color: transparent;
+  border: solid 1px rgba(0, 0, 0, 0.814);
+  cursor: pointer;
+  padding-block: 0;
+  padding-inline: 0;
+  padding: 0.15rem 0;
+  position: absolute;
+  top: 2rem;
+}
+
+.switcher-left {
+  border-radius: 0.5rem 0 0 0.5rem;
+  right: 0;
+  z-index: 2;
+}
+
+.switcher-rigth {
+  border-radius: 0 0.5rem 0.5rem 0;
+  left: 0;
+  z-index: 1;
+}
+
+.sider-switcher-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.body {
+  width: 100%;
+  height: 100%;
+}
+
+.article-field {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+}
+
+.article-field-upper-line {
+  display: flex;
+  justify-content: end;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.article-title {
+  width: 100%;
+  padding: 0 0.5rem;
+  height: 2rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(var(--black), 0.5);
+}
+
+.article-title:focus {
+  outline: none;
+}
+
+.article-title::placeholder {
+  color: rgba(var(--black), 0.5);
+}
+
+.buttons {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.base-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: rgb(37, 132, 255);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.25rem 1rem;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: white;
+  cursor: pointer;
+  width: 100%;
+}
+
+.base-btn:active {
+  background-color: white;
+  color: rgb(37, 132, 255);
+}
+
+.base-btn:disabled {
+  filter: brightness(0.8);
+  cursor: initial;
+}
+
+.base-btn:disabled:active {
+  color: white;
+  background-color: rgb(37, 132, 255);
+}
+
+.article-body-field {
+  flex: 1 0 auto;
+  padding: 0.5rem 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(var(--black), 0.5);
+  resize: none;
+}
+
+.article-body-field:focus {
+  outline: none;
+}
+
+@media screen and (max-width: 768px) {
+  .article-field-upper-line {
+    display: flex;
+    justify-content: end;
+    gap: 2rem;
+    width: 100%;
+  }
+
+  .article-field-upper-line {
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+
+  .buttons {
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .btn-icon {
+    display: none;
+  }
+}

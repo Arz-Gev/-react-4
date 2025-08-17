@@ -12,7 +12,7 @@ export default function DashBoardPage() {
   const { id } = useParams();
 
   useEffect(() => {
-    if (sharedData.userData.id !== Number(id)) navigate("/asdf");
+    if (sharedData.userData.id !== Number(id)) navigate("asdf");
   }, [id]);
 
   return (
