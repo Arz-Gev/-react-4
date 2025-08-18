@@ -1,7 +1,8 @@
 import React, { useContext } from "react";
 import { globalContext } from "../../Context/ContextProvider";
-import "./Welcome.css";
 import { CirclePoundSterling } from "lucide-react";
+
+import "./Welcome.css";
 
 export default function Welcome() {
   const { sharedData } = useContext(globalContext);

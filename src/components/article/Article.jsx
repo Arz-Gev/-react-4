@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight, Save, Trash } from "lucide-react";
+
 import "./Article.css";
 
 export default function Article() {
