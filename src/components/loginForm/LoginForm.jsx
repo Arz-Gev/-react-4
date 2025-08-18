@@ -29,21 +29,20 @@ export default function LoginForm() {
       : setDisabled(true);
   }, [formData]);
 
-  useEffect(() => {
-    setFormData({
-      ...formData,
-      id: Date.now(),
-    });
-  }, [disabled]);
-
   function handleSubmit(e) {
     e.preventDefault();
+    const updatedFormData = {
+      ...formData,
+      id: Date.now(),
+    };
+    setUserData(updatedFormData);
     setDisabled(true);
-    setUserData(formData);
   }
 
   useEffect(() => {
-    sharedData.logged && navigate(`/dashboard/user/${sharedData.userData.id}`);
+    if (sharedData.logged !== false) {
+      navigate(`/dashboard/user/${sharedData.userData.id}`);
+    }
   }, [sharedData.logged]);
 
   return (

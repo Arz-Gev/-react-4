@@ -7,6 +7,7 @@ export default function Context({ children }) {
     const data = localStorage.getItem("userData");
     const parsedData = data ? JSON.parse(data) : null;
 
+    console.log(parsedData);
     return {
       logged: !!data,
       userData: parsedData,
@@ -20,6 +21,7 @@ export default function Context({ children }) {
   }
 
   function setUserData(data) {
+    console.log(data);
     setSharedData({ ...sharedData, userData: data, logged: true });
     localStorage.setItem("userData", JSON.stringify(data));
   }
